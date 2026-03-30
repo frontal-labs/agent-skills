@@ -1,0 +1,87 @@
+{
+  "name": "frontal-agent-skills",
+  "version": "1.0.0",
+  "description": "Frontal Labs collection of agent skills for polyglot platform development",
+  "main": "index.js",
+  "scripts": {
+    "validate": "node scripts/validate-skills.js",
+    "list": "node scripts/list-skills.js",
+    "install-skills": "node scripts/install-skills.js",
+    "lint": "markdownlint \"skills/**/*.md\" \"*.md\" || true",
+    "test": "npm run validate"
+  },
+  "keywords": [
+    "agent-skills",
+    "frontal",
+    "polyglot",
+    "devops",
+    "ai",
+    "performance",
+    "architecture"
+  ],
+  "author": "Frontal Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontal-labs/agent-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frontal-labs/agent-skills/issues"
+  },
+  "homepage": "https://github.com/frontal-labs/agent-skills#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "yaml": "^2.3.4",
+    "chalk": "^4.1.2",
+    "glob": "^10.3.10",
+    "markdownlint-cli": "^0.37.0"
+  },
+  "files": [
+    "skills/",
+    "scripts/",
+    "README.md",
+    "LICENSE.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "skills": {
+    "ai-specialist": {
+      "name": "AI Specialist",
+      "description": "Expert in AI/ML architecture, model selection, training pipelines, and MLOps best practices",
+      "category": "ai-ml",
+      "path": "skills/ai-specialist/SKILL.md"
+    },
+    "api-evolution": {
+      "name": "API Evolution",
+      "description": "Advanced API evolution specialist for polyglot platforms with protocol buffer, REST API, database schema, and client code generation expertise",
+      "category": "backend-architecture",
+      "path": "skills/api-evolution/SKILL.md"
+    },
+    "code-expert": {
+      "name": "Code Expert",
+      "description": "Fine-tuned architectural specialist for polyglot platforms with deep knowledge of Go, Python, Rust, and TypeScript service patterns",
+      "category": "software-architecture",
+      "path": "skills/code-expert/SKILL.md"
+    },
+    "devops-engineer": {
+      "name": "DevOps Engineer",
+      "description": "Infrastructure and deployment specialist for containerized polyglot services with Kubernetes and CI/CD expertise",
+      "category": "devops-infrastructure",
+      "path": "skills/devops-engineer/SKILL.md"
+    },
+    "performance-optimizer": {
+      "name": "Performance Optimizer",
+      "description": "Specialized agent for optimizing application performance, load times, and user experience across web applications and APIs",
+      "category": "performance-optimization",
+      "path": "skills/performance-optimizer/SKILL.md"
+    },
+    "monorepo-improver": {
+      "name": "Monorepo Improver",
+      "description": "Advanced monorepo analysis and improvement agent using LangChain integration for codebase optimization, testing enhancement, and architectural improvements",
+      "category": "monorepo-management",
+      "path": "skills/monorepo-improver/SKILL.md"
+    }
+  }
+}
