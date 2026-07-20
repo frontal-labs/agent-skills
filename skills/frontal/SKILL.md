@@ -1,5 +1,5 @@
 ---
-name: frontal-sdk
+name: frontal
 description: Foundational skill for building with the Frontal TypeScript SDK ecosystem (@frontal-labs/*). Covers the unified Sdk class, core client patterns, configuration, error handling, retries, pagination, and environment setup. Use whenever working with any Frontal SDK package — this is the primary entry point for Frontal SDK usage. Triggers on "Frontal SDK", "@frontal-labs", "FrontalClient", "Sdk class", "frontal API", or any domain-specific Frontal SDK task.
 metadata:
   internal: true

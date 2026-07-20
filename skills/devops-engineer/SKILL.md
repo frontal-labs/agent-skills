@@ -380,7 +380,7 @@ jobs:
         # Send metrics to monitoring service
         curl -X POST "${{ secrets.METRICS_ENDPOINT }}" \
           -H "Content-Type: application/json" \
-          -d '{"service": "frontal-sdk", "timestamp": "'$(date -Iseconds)'"}'
+          -d '{"service": "frontal", "timestamp": "'$(date -Iseconds)'"}'
 ```
 
 ###  Security and Compliance

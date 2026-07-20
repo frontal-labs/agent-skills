@@ -16,7 +16,7 @@ npx skills add frontal-labs/agent-skills
 Or install a single skill:
 
 ```bash
-npx skills add frontal-labs/agent-skills --skill frontal-sdk-ai
+npx skills add frontal-labs/agent-skills --skill frontal-ai
 ```
 
 ## Available Skills
@@ -25,37 +25,37 @@ npx skills add frontal-labs/agent-skills --skill frontal-sdk-ai
 
 | Skill | Description |
 |-------|-------------|
-| `frontal-sdk` | Unified `Sdk` class, `FrontalClient`, core patterns, errors, retries, pagination |
+| `frontal` | Unified `Sdk` class, `FrontalClient`, core patterns, errors, retries, pagination |
 
 ### Domain SDKs
 
 | Skill | Package | Description |
 |-------|---------|-------------|
-| `frontal-sdk-ai` | `@frontal-labs/ai` | LLM inference, embeddings, streaming, multimodal, tool use |
-| `frontal-sdk-agents` | `@frontal-labs/agents` | Agent definition, lifecycle, deployment, execution watching |
-| `frontal-sdk-workflows` | `@frontal-labs/workflows` | Workflow DSL, approvals, triggers, steps |
-| `frontal-sdk-pipelines` | `@frontal-labs/pipelines` | Data pipeline orchestration, backfills, sources |
-| `frontal-sdk-graph` | `@frontal-labs/graph` | Graph entities, traversal, semantic search, time travel |
-| `frontal-sdk-billing` | `@frontal-labs/billing` | Subscriptions, invoices, metering, payment methods |
-| `frontal-sdk-auth` | `@frontal-labs/auth` | Authentication, MFA, OAuth, SSO, admin management |
-| `frontal-sdk-storage` | `@frontal-labs/blob` | Blob upload/download, signed URLs, streaming |
-| `frontal-sdk-governance` | `@frontal-labs/governance` | Policies, RBAC, compliance, access control |
-| `frontal-sdk-events` | `@frontal-labs/events` | Pub/sub, dead-letter queues, schema registry |
-| `frontal-sdk-observability` | `@frontal-labs/observability` | Logs, metrics, traces, alerts, dashboards |
-| `frontal-sdk-webhooks` | `@frontal-labs/webhooks` | Endpoint management, HMAC verification, delivery tracking |
-| `frontal-sdk-ontology` | `@frontal-labs/ontology` | Domain models, migrations, AI-powered generation |
-| `frontal-sdk-integrations` | `@frontal-labs/integrations` | Third-party actions (Salesforce, Slack, Linear, etc.) |
-| `frontal-sdk-sandbox` | `@frontal-labs/sandbox` | Isolated code execution, compile-and-judge |
-| `frontal-sdk-workers` | `@frontal-labs/workers` | Edge runtime, serverless workers, eszip deployment |
-| `frontal-sdk-datasets` | `@frontal-labs/datasets` | Dataset CRUD, versioning, import/export |
-| `frontal-sdk-lineage` | `@frontal-labs/lineage` | Data lineage, dependency tracing, impact analysis |
+| `frontal-ai` | `@frontal-labs/ai` | LLM inference, embeddings, streaming, multimodal, tool use |
+| `frontal-agents` | `@frontal-labs/agents` | Agent definition, lifecycle, deployment, execution watching |
+| `frontal-workflows` | `@frontal-labs/workflows` | Workflow DSL, approvals, triggers, steps |
+| `frontal-pipelines` | `@frontal-labs/pipelines` | Data pipeline orchestration, backfills, sources |
+| `frontal-graph` | `@frontal-labs/graph` | Graph entities, traversal, semantic search, time travel |
+| `frontal-billing` | `@frontal-labs/billing` | Subscriptions, invoices, metering, payment methods |
+| `frontal-auth` | `@frontal-labs/auth` | Authentication, MFA, OAuth, SSO, admin management |
+| `frontal-storage` | `@frontal-labs/blob` | Blob upload/download, signed URLs, streaming |
+| `frontal-governance` | `@frontal-labs/governance` | Policies, RBAC, compliance, access control |
+| `frontal-events` | `@frontal-labs/events` | Pub/sub, dead-letter queues, schema registry |
+| `frontal-observability` | `@frontal-labs/observability` | Logs, metrics, traces, alerts, dashboards |
+| `frontal-webhooks` | `@frontal-labs/webhooks` | Endpoint management, HMAC verification, delivery tracking |
+| `frontal-ontology` | `@frontal-labs/ontology` | Domain models, migrations, AI-powered generation |
+| `frontal-integrations` | `@frontal-labs/integrations` | Third-party actions (Salesforce, Slack, Linear, etc.) |
+| `frontal-sandbox` | `@frontal-labs/sandbox` | Isolated code execution, compile-and-judge |
+| `frontal-workers` | `@frontal-labs/workers` | Edge runtime, serverless workers, eszip deployment |
+| `frontal-datasets` | `@frontal-labs/datasets` | Dataset CRUD, versioning, import/export |
+| `frontal-lineage` | `@frontal-labs/lineage` | Data lineage, dependency tracing, impact analysis |
 
 ## Skill Structure
 
 Each skill follows the [Agent Skills Specification](https://agentskills.io):
 
 ```
-skills/frontal-sdk-<domain>/
+skills/frontal-<domain>/
 ├── SKILL.md              # Required: metadata + instructions
 ├── references/           # Optional: detailed documentation
 └── assets/               # Optional: templates, resources
@@ -125,7 +125,7 @@ npm test
 
 ### Adding New Skills
 
-1. Create `skills/frontal-sdk-<domain>/SKILL.md` with frontmatter:
+1. Create `skills/frontal-<domain>/SKILL.md` with frontmatter:
    ```yaml
    ---
    name: frontal-<domain>
