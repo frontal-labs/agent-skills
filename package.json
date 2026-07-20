@@ -1,7 +1,7 @@
 {
-  "name": "frontal-agent-skills",
-  "version": "1.0.0",
-  "description": "Frontal Labs collection of agent skills for polyglot platform development",
+  "name": "agent-skills",
+  "version": "2.0.0",
+  "description": "Frontal Labs collection of agent skills for the Frontal TypeScript SDK ecosystem (@frontal-labs/*)",
   "main": "index.js",
   "scripts": {
     "validate": "node scripts/validate-skills.js",
@@ -13,11 +13,14 @@
   "keywords": [
     "agent-skills",
     "frontal",
+    "frontal-sdk",
     "polyglot",
     "devops",
     "ai",
     "performance",
-    "architecture"
+    "architecture",
+    "typescript",
+    "sdk"
   ],
   "author": "Frontal Labs",
   "license": "MIT",
@@ -30,7 +33,7 @@
   },
   "homepage": "https://github.com/frontal-labs/agent-skills#readme",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "yaml": "^2.3.4",
@@ -40,6 +43,7 @@
   },
   "files": [
     "skills/",
+    "references/",
     "scripts/",
     "README.md",
     "LICENSE.md",
@@ -47,41 +51,119 @@
     "SECURITY.md"
   ],
   "skills": {
-    "ai-specialist": {
-      "name": "AI Specialist",
-      "description": "Expert in AI/ML architecture, model selection, training pipelines, and MLOps best practices",
-      "category": "ai-ml",
-      "path": "skills/ai-specialist/SKILL.md"
+    "frontal-sdk": {
+      "name": "Frontal SDK Core",
+      "description": "Foundational skill for @frontal-labs/* — unified Sdk class, FrontalClient, error handling, retries, pagination, and environment setup. Use whenever working with any Frontal SDK package.",
+      "category": "sdk-foundation",
+      "path": "skills/frontal-sdk/SKILL.md"
     },
-    "api-evolution": {
-      "name": "API Evolution",
-      "description": "Advanced API evolution specialist for polyglot platforms with protocol buffer, REST API, database schema, and client code generation expertise",
-      "category": "backend-architecture",
-      "path": "skills/api-evolution/SKILL.md"
+    "frontal-sdk-ai": {
+      "name": "Frontal SDK: AI & Inference",
+      "description": "Build AI features with @frontal-labs/ai — text generation, streaming, embeddings, structured outputs, multimodal (image/video/speech), and tool use. Use when integrating LLMs or AI inference.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-ai/SKILL.md"
     },
-    "code-expert": {
-      "name": "Code Expert",
-      "description": "Fine-tuned architectural specialist for polyglot platforms with deep knowledge of Go, Python, Rust, and TypeScript service patterns",
-      "category": "software-architecture",
-      "path": "skills/code-expert/SKILL.md"
+    "frontal-sdk-agents": {
+      "name": "Frontal SDK: Agents",
+      "description": "Build AI agents with @frontal-labs/agents — define, deploy, run executions, watch events via SSE. Use when creating agent workflows or orchestrating agent lifecycles.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-agents/SKILL.md"
     },
-    "devops-engineer": {
-      "name": "DevOps Engineer",
-      "description": "Infrastructure and deployment specialist for containerized polyglot services with Kubernetes and CI/CD expertise",
-      "category": "devops-infrastructure",
-      "path": "skills/devops-engineer/SKILL.md"
+    "frontal-sdk-workflows": {
+      "name": "Frontal SDK: Workflows",
+      "description": "Orchestrate workflows with @frontal-labs/workflows — approval chains, conditional logic, parallel branches, scheduled triggers. Use when building business processes or multi-step automation.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-workflows/SKILL.md"
     },
-    "performance-optimizer": {
-      "name": "Performance Optimizer",
-      "description": "Specialized agent for optimizing application performance, load times, and user experience across web applications and APIs",
-      "category": "performance-optimization",
-      "path": "skills/performance-optimizer/SKILL.md"
+    "frontal-sdk-pipelines": {
+      "name": "Frontal SDK: Pipelines",
+      "description": "Build data pipelines with @frontal-labs/pipelines — source ingestion, transformations, enrichment, validation, backfills. Use when orchestrating data flows.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-pipelines/SKILL.md"
     },
-    "monorepo-improver": {
-      "name": "Monorepo Improver",
-      "description": "Advanced monorepo analysis and improvement agent using LangChain integration for codebase optimization, testing enhancement, and architectural improvements",
-      "category": "monorepo-management",
-      "path": "skills/monorepo-improver/SKILL.md"
+    "frontal-sdk-graph": {
+      "name": "Frontal SDK: Graph",
+      "description": "Query and mutate the knowledge graph with @frontal-labs/graph — entity CRUD, traversal, semantic search, relationships, time travel. Use when working with graph entities or knowledge graphs.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-graph/SKILL.md"
+    },
+    "frontal-sdk-billing": {
+      "name": "Frontal SDK: Billing",
+      "description": "Manage SaaS billing with @frontal-labs/billing — subscriptions, invoices, payment methods, metering, credits. Use when implementing billing or subscription features.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-billing/SKILL.md"
+    },
+    "frontal-sdk-auth": {
+      "name": "Frontal SDK: Auth",
+      "description": "Authenticate users with @frontal-labs/auth — sign-up/sign-in, MFA, OAuth, SSO, session management, admin APIs. Use when implementing login or identity features.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-auth/SKILL.md"
+    },
+    "frontal-sdk-storage": {
+      "name": "Frontal SDK: Storage",
+      "description": "Manage object storage with @frontal-labs/blob — upload, download, streaming, signed URLs, metadata, copy/move. Use when handling files or blob storage.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-storage/SKILL.md"
+    },
+    "frontal-sdk-governance": {
+      "name": "Frontal SDK: Governance",
+      "description": "Enforce policies and RBAC with @frontal-labs/governance — policies, roles, permissions, compliance assessments, violations. Use when implementing access control or compliance.",
+      "category": "sdk-domain",
+      "path": "skills/frontal-sdk-governance/SKILL.md"
+    },
+    "frontal-sdk-events": {
+      "name": "Frontal SDK: Events",
+      "description": "Pub/sub event bus with @frontal-labs/events — publish/subscribe, dead-letter queues, schema registry. Use when building event-driven architectures.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-events/SKILL.md"
+    },
+    "frontal-sdk-observability": {
+      "name": "Frontal SDK: Observability",
+      "description": "Collect telemetry with @frontal-labs/observability — logs, metrics, traces, alerts, dashboards, OTLP export. Use when implementing monitoring or observability.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-observability/SKILL.md"
+    },
+    "frontal-sdk-webhooks": {
+      "name": "Frontal SDK: Webhooks",
+      "description": "Manage webhook endpoints with @frontal-labs/webhooks — create endpoints, verify HMAC, track delivery, retry rules. Use when receiving or delivering webhooks.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-webhooks/SKILL.md"
+    },
+    "frontal-sdk-ontology": {
+      "name": "Frontal SDK: Ontology",
+      "description": "Manage domain models with @frontal-labs/ontology — validation, AI-powered generation, migrations, rules, mixins. Use when modeling domains or evolving schemas.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-ontology/SKILL.md"
+    },
+    "frontal-sdk-integrations": {
+      "name": "Frontal SDK: Integrations",
+      "description": "Execute third-party actions with @frontal-labs/integrations — Salesforce, Slack, Linear, and 20+ providers. Use when building cross-service workflows.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-integrations/SKILL.md"
+    },
+    "frontal-sdk-sandbox": {
+      "name": "Frontal SDK: Sandbox",
+      "description": "Run isolated code execution with @frontal-labs/sandbox — compile-and-judge, multiple languages, resource limits. Use when executing untrusted code or coding challenges.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-sandbox/SKILL.md"
+    },
+    "frontal-sdk-workers": {
+      "name": "Frontal SDK: Workers",
+      "description": "Deploy edge workers with @frontal-labs/workers — serverless functions, eszip bundles, env vars. Use when deploying to the Frontal edge runtime.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-workers/SKILL.md"
+    },
+    "frontal-sdk-datasets": {
+      "name": "Frontal SDK: Datasets",
+      "description": "Manage versioned datasets with @frontal-labs/datasets — CRUD, versioning, import/export, quality checks. Use when working with structured data or data versioning.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-datasets/SKILL.md"
+    },
+    "frontal-sdk-lineage": {
+      "name": "Frontal SDK: Lineage",
+      "description": "Trace data lineage with @frontal-labs/lineage — upstream/downstream impact, column-level lineage, Mermaid export. Use for impact analysis or compliance audits.",
+      "category": "sdk-specialized",
+      "path": "skills/frontal-sdk-lineage/SKILL.md"
     }
   }
 }
