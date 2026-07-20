@@ -51,12 +51,12 @@ metadata:
 @frontal/workflows (depends on @frontal/pipelines, @frontal/ai)
 ```
 
-### 🔄 TypeScript API Evolution Patterns
+###  TypeScript API Evolution Patterns
 
 **Interface Evolution**:
 
 ```typescript
-// ✅ Safe additions - extend existing interfaces
+//  Safe additions - extend existing interfaces
 // Before
 interface FrontalClient {
   request<T>(endpoint: string, data?: any): Promise<T>;
@@ -68,7 +68,7 @@ interface FrontalClient {
   requestWithCache<T>(endpoint: string, data?: any, ttl?: number): Promise<T>;
 }
 
-// ✅ Generic parameter additions
+//  Generic parameter additions
 // Before
 interface ApiResponse<T> {
   data: T;
@@ -86,14 +86,14 @@ interface ApiResponse<T, M = unknown> {
 **Function Parameter Evolution**:
 
 ```typescript
-// ✅ Optional parameter additions
+//  Optional parameter additions
 // Before
 function createClient(config: ClientConfig): FrontalClient;
 
 // After (compatible)
 function createClient(config: ClientConfig, options?: ClientOptions): FrontalClient;
 
-// ✅ Function overloading for backward compatibility
+//  Function overloading for backward compatibility
 // Before
 function generateText(prompt: string): Promise<string>;
 
@@ -103,15 +103,15 @@ function generateText(prompt: string, options: TextGenerationOptions): Promise<T
 function generateText(prompt: string, options?: TextGenerationOptions): Promise<string | TextGenerationResult> {
   // Implementation
 }
--- ✅ Safe additions with default
+--  Safe additions with default
 ALTER TABLE users ADD COLUMN created_at TIMESTAMP DEFAULT NOW();
 
--- ❌ Breaking changes (require migration)
+--  Breaking changes (require migration)
 ALTER TABLE users DROP COLUMN old_field;
 ALTER TABLE users MODIFY COLUMN id BIGINT; -- Type change
 ```
 
-### 🔗 Client Code Generation
+###  Client Code Generation
 
 **Cross-Language Client Generation**:
 
@@ -130,7 +130,7 @@ Proto Definitions → Code Generator → Language-Specific Clients
 
 ## Advanced API Evolution Capabilities
 
-### 📊 Impact Analysis Engine
+###  Impact Analysis Engine
 
 **Dependency Mapping**:
 
@@ -150,13 +150,13 @@ Proto Definitions → Code Generator → Language-Specific Clients
 
 | Change Type | Compatibility | Migration Required | Risk Level |
 |-------------|----------------|-------------------|------------|
-| Add field   | ✅ Compatible   | No                | Low        |
-| Remove field| ❌ Breaking    | Yes               | High       |
-| Change type | ❌ Breaking    | Yes               | High       |
-| Add endpoint| ✅ Compatible   | No                | Low        |
-| Remove endpoint| ❌ Breaking    | Yes               | High       |
+| Add field   |  Compatible   | No                | Low        |
+| Remove field|  Breaking    | Yes               | High       |
+| Change type |  Breaking    | Yes               | High       |
+| Add endpoint|  Compatible   | No                | Low        |
+| Remove endpoint|  Breaking    | Yes               | High       |
 
-### 🛡️ Compatibility Management
+###  Compatibility Management
 
 **Backward Compatibility Strategies**:
 

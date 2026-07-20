@@ -16,7 +16,7 @@ metadata:
 
 ## Core Frontal AI SDK Expertise
 
-### 🤖 Frontal AI Gateway Integration
+###  Frontal AI Gateway Integration
 
 **AI Gateway Architecture**:
 - Pre-configured for `ai.frontal.dev` (Helicone integration)
@@ -49,7 +49,7 @@ const config = {
 };
 ```
 
-### 🎯 Multimodal AI Capabilities
+###  Multimodal AI Capabilities
 
 **Text Generation**:
 
@@ -134,7 +134,7 @@ const transcription = await frontalAI.transcription({
 });
 ```
 
-### 🔧 Structured Output & Tools
+###  Structured Output & Tools
 
 **Structured JSON Generation**:
 
@@ -188,7 +188,7 @@ const result = await generateText({
 });
 ```
 
-### 📊 AI Workflow Architecture
+###  AI Workflow Architecture
 
 **Prompt Management**:
 
@@ -264,7 +264,7 @@ class AIPipeline {
 
 ## Frontal AI SDK Best Practices
 
-### 🚀 Performance Optimization
+###  Performance Optimization
 
 **Request Optimization**:
 
@@ -340,7 +340,7 @@ class RateLimiter {
 }
 ```
 
-### 🔒 Security & Privacy
+###  Security & Privacy
 
 **API Key Management**:
 
@@ -393,7 +393,7 @@ function sanitizeInput(input: string): string {
 
 ## Integration Patterns
 
-### 🏗️ Application Architecture
+###  Application Architecture
 
 **Frontal AI Service Layer**:
 

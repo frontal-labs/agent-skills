@@ -16,23 +16,23 @@ metadata:
 
 ## Frontal SDK Performance Architecture
 
-### 📦 Bundle Size Optimization
+###  Bundle Size Optimization
 
 **Tree-Shaking Optimization**:
 
 ```typescript
-// ✅ Optimized exports for tree-shaking
+//  Optimized exports for tree-shaking
 // packages/ai/src/index.ts
 export { generateText, streamText } from './generators';
 export { embed } from './embeddings';
 export type { GenerateTextOptions, EmbedOptions } from './types';
 
-// ❌ Avoid this - prevents tree-shaking
+//  Avoid this - prevents tree-shaking
 export * from './generators';
 export * from './embeddings';
 export * from './types';
 
-// ✅ Conditional exports
+//  Conditional exports
 export const createClient = (config: ClientConfig) => {
   if (config.isNode) {
     return require('./node-client').createNodeClient(config);
@@ -88,7 +88,7 @@ export default defineConfig({
 });
 ```
 
-### ⚡ Runtime Performance
+###  Runtime Performance
 
 **Connection Pooling**:
 
@@ -186,7 +186,7 @@ export class FrontalAI {
 }
 ```
 
-### 🚀 Memory Optimization
+###  Memory Optimization
 
 **Weak References for Large Objects**:
 
@@ -260,7 +260,7 @@ export class StreamProcessor {
 }
 ```
 
-### 📊 Performance Monitoring
+###  Performance Monitoring
 
 **Performance Metrics Collection**:
 
@@ -316,7 +316,7 @@ export function measurePerformance(target: any, propertyKey: string, descriptor:
 }
 ```
 
-### 🔧 Build Performance
+###  Build Performance
 
 **Turbo Build Optimization**:
 
@@ -384,7 +384,7 @@ export class BuildOptimizer {
 }
 ```
 
-### 🎯 Developer Experience Optimization
+###  Developer Experience Optimization
 
 **IntelliSense and Type Performance**:
 
@@ -469,7 +469,7 @@ export class DevServer {
 
 ## Performance Testing Framework
 
-### 📈 Benchmark Suite
+###  Benchmark Suite
 
 ```typescript
 // packages/testing/src/benchmark.ts
