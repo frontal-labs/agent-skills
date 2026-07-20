@@ -166,4 +166,4 @@ Register at [skills.sh/frontal-labs/agent-skills](https://skills.sh/frontal-labs
 
 ---
 
-**Frontal Labs** — Building the future of polyglot development
+**Frontal** — Building the future of intelligent AI systems at scale.
